@@ -1,0 +1,102 @@
+@import "color"
+
+.bg-color-main
+  background-color mainColor
+.eighty-height
+  min-height: 80vh
+.full-height
+  min-height: 100vh
+.flex
+  display: flex
+.flex-vertical-center
+  flex-direction: column
+  justify-content: center
+.flex-horizontal-center
+  align-items: center
+.out-container
+  border-top: 1px
+.section
+  min-height: 80vh
+  .section-img-0
+    width: 100%
+    max-width: 580px
+    box-shadow: 0 0 25px rgba(0,0,0,0.5)
+  .section-img-1
+    width: 100px
+  .section-img-gif
+    width: 300px
+  .section-p-1
+    max-width: 800px
+  .figure-list
+    margin: 80px 0 60px
+    p
+      color lightGreyColor
+  h1
+    font-size: 3rem
+    font-weight: 800
+    color: mainColor
+  h2
+    font-size: 2.5rem
+    color: greyColor
+  p
+    font-size: 1.25rem
+    color: lightGreyColor
+#download
+  height: 100vh
+  margin-top: 80px;
+  .download-bg
+    position: absolute
+    background-color: mainColor
+    transform: skew(0, -5deg);
+    width: 100%;
+    height: 110vh;
+    z-index: -1
+  button 
+    margin-top 30px
+#about
+  background: white
+  .container-about
+    padding: 50px 150px
+  .about-item
+    height: 130px
+    h3
+      font-size: 1.25rem
+      font-weight: 600
+      color: greyColor
+      margin-bottom: 1rem
+  p
+    font-size: 0.9rem
+    color: greyColor 
+    line-height: 1rem
+    margin-bottom: 0.2rem
+.container-documentation
+  margin-top 100px
+  .navbar-brand
+    width: 100%
+.doc-content
+  height: 70vh
+  overflow-y: scroll;
+  &::-webkit-scrollbar
+    width: 0
+  -ms-overflow-style: none;
+  overflow-y: -moz-scrollbars-none;
+  img
+    max-width: 100%
+  code
+    border-radius: 2.5px;
+    color: white;
+    padding: 2.5px;
+    background-color: lightGreyColor
+  h3
+    margin-top: 50px
+    padding-top: 15px
+    border-top: 1px dotted lightGreyColor
+.nav-link
+  padding: 0.15rem 0.3rem;
+  font-size: 0.9rem;
+  color: mainColor
+  &:hover
+    color: mainLightColor
+.nav, .nav-pills
+  .nav-link.active
+    background-color: mainColor 

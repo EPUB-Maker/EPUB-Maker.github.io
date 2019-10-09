@@ -1,0 +1,10 @@
+---
+layout: layout
+---
+<% 
+var hasTag = (tags, name) => tags.some(tag => tag.name === name)
+var isLang = (post, lang) => post.lang === lang
+var concepts = site.posts.filter(post => hasTag(post.tags, 'Concepts') && isLang(post, 'zh-CN')).sort('date')
+var guide = site.posts.filter(post => hasTag(post.tags, 'Guide') && isLang(post, 'zh-CN')).sort('date')
+%>
+<%- include('templates/documentation', { concepts: concepts, guide: guide }); %>

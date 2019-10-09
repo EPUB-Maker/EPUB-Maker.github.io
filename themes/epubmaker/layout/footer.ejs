@@ -1,0 +1,36 @@
+<footer id="about" class="about">
+  <div class="container container-about">
+    <div class="row flex flex-horizontal-center">
+      <div class="col-6 about-item">
+        <h3><%= __('about.thanks.title') %></h3>
+        <p>
+          <a href="<%= __('about.thanks.icon8.link') %>" target="_blank"><%= __('about.thanks.icon8.title') %></a>
+          <span><%= __('about.thanks.icon8.des') %></span>
+        </p>
+        <p>
+          <span><%= __('about.thanks.hexo.des') %></span>
+          <a href="<%= __('about.thanks.hexo.link') %>" target="_blank"><%= __('about.thanks.hexo.title') %></a>
+        </p>
+      </div>
+      <div class="col-6 about-item">
+        <h3><%= __('about.contact.title') %></h3>
+        <p>
+          <span><%= __('about.contact.email.title') %></span> / <span><%= __('about.contact.email.link') %></span>
+        </p>
+        <p>
+          <a href="<%= __('about.contact.twitter.link') %>" target="_blank"><%= __('about.contact.twitter.title') %></a>
+        </p>
+        <p>
+          <a href="<%= __('about.developers.issues.link') %>" target="_blank"><%= __('about.developers.issues.title') %></a>
+        </p>
+      </div>
+    </div>
+    <div class="text-center">
+      <p><%= __('about.copyright') %></p>
+    </div>
+  </div>
+</footer>
+<script>
+  var downloadLink = "<%= site.data.download.link %>"
+</script>
+<%- js('js/index') %>

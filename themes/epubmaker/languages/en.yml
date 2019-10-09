@@ -1,0 +1,78 @@
+navigator:
+  home: Home
+  download: Download
+  documentation: Documentation
+  about: About
+  lang:
+    - 中文版
+sections:
+  - 
+    title: EPUBMaker
+    context: A SIMPLE WAY TO BUILD YOUR EPUB.
+  - 
+    title: Fast Processing
+    figcaption:
+      - Import TXT
+      - Import EPUB
+      - Split Chapter
+      - Publish EPUB
+    context: 
+      - EPUBMaker will provide you a fast way to establish your epub both on importing, splitting and publishing.
+      - The operation will all be done in backend so that you can process the big data files faster than ever before.
+  -
+    title: Smart Splitting
+    figcaption:
+      - Split by Patterns
+      - Split by Lines
+    context: There are two ways of splitting text into different chapters. It's more flexible and more efficient to split chapters.
+  -
+    title: More Batch Operations
+    context: More batch tools are provided to process the text in convenience.
+    subTitle:
+      chapter:
+        title: For Chapter
+        context:
+          - Take the First Line as Chapter Name
+          - Take Chapter Name as the First Line
+          - Delete Blank Chpater
+      article:
+        title: For Single Article
+        context:
+          - Reformat
+          - Remove Blank Line
+          - Remove Duplicate Line
+  -
+    title: Light Editor
+    context: EPUBMaker
+download:
+  title: How to get EPUBMaker?
+  windows: Windows
+  mac: OS X(on the way)
+about:
+  thanks:
+    title: Thanks
+    icon8:
+      title: icon8
+      des: An awesome resources website
+      link: https://icons8.com/
+    hexo:
+      title: Hexo
+      des: Powered by
+      link: https://hexo.io
+  contact:
+    title: Contact Us
+    email:
+      title: Email
+      link: epubmaker2019@gmail.com
+    twitter:
+      title: Twitter
+      link: https://twitter.com/EPUBMaker2019
+  developers:
+    title: Developers
+    issues:
+      title: Issues & Bugs
+      link: https://github.com/EPUB-Maker/EPUBMaker-Releases/issues
+  copyright: Copyright © 2019 EPUBMaker. All Rights Reserved.
+documentation:
+  concepts: Concepts
+  guide: Guide

@@ -1,0 +1,41 @@
+---
+layout: layout
+---
+<div class="container container-documentation">
+  <div class="row">
+    <div class="col-3">
+      <nav id="navbar-documentation" class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#"><%= __('navigator.documentation') %></a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link" href="#id-guide"><%= __('documentation.guide') %></a>
+          <nav class="nav nav-pills flex-column">
+            <% guide.forEach((post, index) => { %>
+              <a class="nav-link ml-3 my-1" href="#<%= post.linkId %>"><%= post.title %></a>
+            <% }) %>
+          </nav>
+          <a class="nav-link" href="#id-concepts"><%= __('documentation.concepts') %></a>
+          <nav class="nav nav-pills flex-column">
+            <% concepts.forEach((post, index) => { %>
+              <a class="nav-link ml-3 my-1" href="#<%= post.linkId %>"><%= post.title %></a>
+            <% }) %>
+          </nav>
+        </nav>
+      </nav>
+    </div>
+    <div class="col-9">
+      <div class="doc-content" data-spy="scroll" data-target="#navbar-documentation" data-offset="0">
+        <h2 id="id-guide"><%= __('documentation.guide') %></h2>
+        <% guide.forEach((post, index) => { %>
+          <h3 id="<%= post.linkId %>"><%= post.title %></h3>
+          <%- post.content %>
+        <% }) %>
+        <h2 id="id-concepts"><%= __('documentation.concepts') %></h2>
+        <% concepts.forEach((post, index) => { %>
+          <h3 id="<%= post.linkId %>"><%= post.title %></h3>
+          <%- post.content %>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</div>
+<%- partial('footer') %>

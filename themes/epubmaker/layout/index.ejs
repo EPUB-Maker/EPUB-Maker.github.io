@@ -1,0 +1,79 @@
+
+<div id="home">
+  <div class="out-container full-height">
+  <section class="container section title">
+    <div class="row eighty-height">
+      <div class="col-4 flex flex-vertical-center">
+        <h1 class="text-right"><%= __('sections.0.title') %></h1>
+        <p class="text-right"><%= __('sections.0.context') %></p>
+      </div>
+      <div class="col-8 flex flex-vertical-center flex-horizontal-center">
+        <img class="section-img-0" src="/images/1.png" />
+      </div>
+    </div>
+  </section>
+  </div>
+  <div class="out-container">
+  <section class="container section flex flex-vertical-center">
+    <h2 class="text-center"><%= __('sections.1.title') %></h2>
+    <div class="flex figure-list">
+      <figure class="col-3 text-center"><img class="section-img-1" src="/images/2-1.png" /><figcaption><%= __('sections.1.figcaption.0') %></figcaption></figure>
+      <figure class="col-3 text-center"><img class="section-img-1" src="/images/2-2.png" /><figcaption><%= __('sections.1.figcaption.1') %></figcaption></figure>
+      <figure class="col-3 text-center"><img class="section-img-1" src="/images/2-3.png" /><figcaption><%= __('sections.1.figcaption.2') %></figcaption></figure>
+      <figure class="col-3 text-center"><img class="section-img-1" src="/images/2-4.png" /><figcaption><%= __('sections.1.figcaption.3') %></figcaption></figure>
+    </div>
+    <div class="flex flex-horizontal-center flex-vertical-center">
+      <p class="section-p-1"><%= __('sections.1.context.0') %> <%= __('sections.1.context.1') %></p>
+    </div>
+  </section>
+  </div>
+  <div class="out-container">
+  <section class="container section flex flex-vertical-center">
+    <h2 class="text-center"><%= __('sections.2.title') %></h2>
+    <div class="flex flex-horizontal-center flex-vertical-center">
+      <p class="section-p-1"><%= __('sections.2.context') %></p>
+    </div>
+    <div class="flex figure-list">
+      <figure class="col-6 text-center"><img class="section-img-0" src="/images/3-1.png" /><figcaption><%= __('sections.2.figcaption.0') %></figcaption></figure>
+      <figure class="col-6 text-center"><img class="section-img-0" src="/images/3-2.png" /><figcaption><%= __('sections.2.figcaption.1') %></figcaption></figure>
+    </div>
+  </section>
+  </div>
+  <div class="out-container">
+  <section class="container section flex flex-vertical-center">
+    <h2 class="text-center"><%= __('sections.3.title') %></h2>
+    <div class="flex flex-horizontal-center flex-vertical-center">
+      <p class="section-p-1"><%= __('sections.3.context') %></p>
+    </div>
+    <div class="subtitle">
+      <div class="subtitle-section">
+        <h3 class="text-center"><%= __('sections.3.subTitle.chapter.title') %></h3>
+        <div class="flex">
+          <figure class="col-4 text-center"><img class="section-img-gif" src="/images/4-1.gif" /><figcaption><%= __('sections.3.subTitle.chapter.context.0') %></figcaption></figure>
+          <figure class="col-4 text-center"><img class="section-img-gif" src="/images/4-2.gif" /><figcaption><%= __('sections.3.subTitle.chapter.context.1') %></figcaption></figure>
+          <figure class="col-4 text-center"><img class="section-img-gif" src="/images/4-3.gif" /><figcaption><%= __('sections.3.subTitle.chapter.context.2') %></figcaption></figure>
+        </div>
+      </div>
+      <div class="subtitle-section">
+        <h3 class="text-center"><%= __('sections.3.subTitle.article.title') %></h3>
+        <div class="flex">
+          <figure class="col-4 text-center"><img class="section-img-gif" src="/images/4-4.gif" /><figcaption><%= __('sections.3.subTitle.article.context.0') %></figcaption></figure>
+          <figure class="col-4 text-center"><img class="section-img-gif" src="/images/4-5.gif" /><figcaption><%= __('sections.3.subTitle.article.context.1') %></figcaption></figure>
+          <figure class="col-4 text-center"><img class="section-img-gif" src="/images/4-6.gif" /><figcaption><%= __('sections.3.subTitle.article.context.2') %></figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+</div>
+<div id="download">
+  <div class="download-bg"></div>
+  <div class="container flex flex-horizontal-center flex-vertical-center full-height">
+    <h2><%= __('download.title') %></h2>
+    <div>
+      <button id="download-btn" type="button" class="btn btn-light btn-lg"><%= __('download.windows') %></button>
+      <button type="button" class="btn btn-outline-light btn-lg" disabled><%= __('download.mac') %></button>
+    </div>
+  </div>
+</div>
+<%- partial('footer') %>

@@ -1,0 +1,78 @@
+navigator:
+  home: 主页
+  download: 下载
+  documentation: 文档
+  about: 关于
+  lang:
+    - English Version
+sections:
+  - 
+    title: EPUBMaker
+    context: 简单建构你的 EPUB
+  - 
+    title: 快速处理
+    figcaption:
+      - 导入 TXT
+      - 导入 EPUB
+      - 拆分章节
+      - 发布 EPUB
+    context: 
+      - EPUBMaker 将会以一种快速的方式来导入、拆分、发布从而建立你的 EPUB。
+      - 这些操作将会在后台完成，所以你可以以从未有过地快速来处理大数据文件。
+  -
+    title: 智能拆分
+    figcaption:
+      - 按模式拆分
+      - 按行数拆分
+    context: 有两种方式可以拆分文字到不同的章节。这个可以更加灵活和效率地拆分。
+  -
+    title: 更多地批量操作
+    context: 有了更多地批量操作工具，处理文字更加方便。
+    subTitle:
+      chapter:
+        title: 对于章节的操作
+        context:
+          - 将首行作为章节名
+          - 将章节名作为首行
+          - 删除空白章节
+      article:
+        title: 对于文章的操作
+        context:
+          - 清除格式
+          - 移除空白行
+          - 移除重复行
+  -
+    title: Light Editor
+    context: EPUBMaker
+download:
+  title: 如何获取 EPUBMaker？
+  windows: Windows
+  mac: OS X（期待）
+about:
+  thanks:
+    title: 鸣谢
+    icon8:
+      title: icon8
+      des: An awesome resources website
+      link: https://icons8.com/
+    hexo:
+      title: Hexo
+      des: Powered by
+      link: https://hexo.io
+  contact:
+    title: 联系我们
+    email:
+      title: Email
+      link: epubmaker2019@gmail.com
+    twitter:
+      title: Twitter
+      link: https://twitter.com/EPUBMaker2019
+  developers:
+    title: 开发者
+    issues:
+      title: 讨论与问题
+      link: https://github.com/EPUB-Maker/EPUBMaker-Releases/issues
+  copyright: Copyright © 2019 EPUBMaker. 版权所有。
+documentation:
+  concepts: 概念
+  guide: 指导
