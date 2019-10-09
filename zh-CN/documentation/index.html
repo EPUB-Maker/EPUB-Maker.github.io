@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>EPUBMaker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <link rel="icon" href="/images/favicon.png">
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">EPUBMaker</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/zh-CN/#home">主页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/zh-CN/#download">下载</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/zh-CN/documentation">文档</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/zh-CN/#about">关于</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">English Version</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+---
+layout: layout
+---
+<div class="container container-documentation">
+  <div class="row">
+    <div class="col-3">
+      <nav id="navbar-documentation" class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">文档</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link" href="#id-guide">指导</a>
+          <nav class="nav nav-pills flex-column">
+            
+              <a class="nav-link ml-3 my-1" href="#Start-a-new-Book">创建一本新书</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Import-TXT-or-EPUB">导入 TXT 或 EPUB</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Edit-EPUB-Properties">编辑 EPUB 属性</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Insert-Resources">插入资源</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Create-Chapter">创建章节</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Delete-Chapter">删除章节</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Merge-Chapter">合并章节</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Split-Chapter">拆分章节</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Sort-Chapter">排序章节</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Rename-Chapter">重命名章节</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Do-Batch-Operation">批量操作</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Find-Logs">寻找日志</a>
+            
+          </nav>
+          <a class="nav-link" href="#id-concepts">概念</a>
+          <nav class="nav nav-pills flex-column">
+            
+              <a class="nav-link ml-3 my-1" href="#EMDB">EMDB</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Match-Patterns">模式匹配</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Levenshtein-Distance">Levenshtein 距离</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Editable">可编辑</a>
+            
+          </nav>
+        </nav>
+      </nav>
+    </div>
+    <div class="col-9">
+      <div class="doc-content" data-spy="scroll" data-target="#navbar-documentation" data-offset="0">
+        <h2 id="id-guide">指导</h2>
+        
+          <h3 id="Start-a-new-Book">创建一本新书</h3>
+          <p>你有四种办法来创建一本新书：</p>
+<ul>
+<li><code>文件</code> -&gt; <code>新建</code></li>
+<li><code>文件</code> -&gt; <code>打开</code></li>
+<li><code>文件</code> -&gt; <code>导入 TXT</code></li>
+<li><code>文件</code> -&gt; <code>导入 EPUB</code></li>
+</ul>
+<p>当你 <code>新建</code> 一本书的时候，EPUBMaker 将会创建一个新章节和一个新文章并链接到这个章节。新章节包含了章节名，新文章也是可编辑的。</p>
+<p>以上的操作都可以建立一个新的工作区。要了解后两个操作，你可以前往<a href="#Import-TXT-or-EPUB">导入 TXT 或 EPUB</a>查看。</p>
+<p>在 EPUB 属性设置中也有些许不同，你可以前往<a href="#Edit-EPUB-Properties">编辑 EPUB 属性</a>去了解更多。■</p>
+
+        
+          <h3 id="Import-TXT-or-EPUB">导入 TXT 或 EPUB</h3>
+          <p><code>导入 TXT</code> 将会首先创建一个章节，并导入所有的行到这个章节中。如果行数超过 1000，你将无法编辑这个章节（详情参见<a href="#Editable">可编辑</a>）。</p>
+<p><code>导入 EPUB</code> 将会保持 EPUB 的章节结构并转化 HTML 页面变成 EPUBMaker 的文章结构。同时也会解压媒体资源到如下路径： </p>
+<p><code>C:\Users\${Users}\AppData\Roaming\epubmaker\epubmaker-resource\${timestamp}</code></p>
+<p>EPUBMaker 可以快速处理大数据文件。你可以轻松导入超过 2MB 的 TXT 文件或 20MB 的 EPUB 文件（大数据 EPUB 文件可能会需要较多时间转化）。 ■</p>
+
+        
+          <h3 id="Edit-EPUB-Properties">编辑 EPUB 属性</h3>
+          <p>当你 <code>新建</code> 一个新书或 <code>导入 TXT</code> 时，将会创建一个名字为“新章节”的新章节并且创建一个空的文章。书籍属性将会被设置成默认值：</p>
+<ul>
+<li>书籍名称：书名</li>
+<li>书籍作者：佚名</li>
+<li>书籍描述：书籍描述</li>
+<li>语言：中文</li>
+<li>EPUB 版本：3.0</li>
+<li>唯一认证键名：uid</li>
+<li>唯一认证键值：（随机生成，不推荐修改）</li>
+</ul>
+<p>如果你 <code>导入 EPUB</code> ，EPUBMaker 将会用导入的 EPUB 属性来填充到书籍属性中。你需要注意的是，EPUBMaker  只会在第一次 <code>导入 EPUB</code> 的时候设置 EPUB 属性。如果你已经有工作区，它将不会覆盖现有的  EPUB 属性。■</p>
+
+        
+          <h3 id="Insert-Resources">插入资源</h3>
+          <p>如果你想要往文章中插入媒体资源，你需要先导入这个资源到媒体库中。点击 <code>编辑</code> -&gt;  <code>媒体库</code>  或 <code>编辑</code> -&gt; <code>插入图片</code> , <code>编辑</code> -&gt; <code>插入音频</code>, <code>编辑</code> -&gt; <code>插入视频</code> 来打开媒体库。</p>
+<p><img src="/images/guide-insert-resources-1.png" alt></p>
+<h4 id="如何导入资源"><a href="#如何导入资源" class="headerlink" title="如何导入资源"></a>如何导入资源</h4><p>有两种办法导入资源，第一种是点击 <code>导入</code>，并选择你想要导入的资源。</p>
+<p>第二种是直接拖动你的资源进入媒体库中，如下：</p>
+<p><img src="/images/guide-insert-resources-2.gif" alt></p>
+<h4 id="如何在文章中插入、删除资源"><a href="#如何在文章中插入、删除资源" class="headerlink" title="如何在文章中插入、删除资源"></a>如何在文章中插入、删除资源</h4><p>先选择一个资源，然后你可以同时选择其他资源一起插入或删除。</p>
+<p><img src="/images/guide-insert-resources-3.png" alt></p>
+<p><img src="/images/guide-insert-resources-4.png" alt></p>
+<h4 id="什么是资源锁？"><a href="#什么是资源锁？" class="headerlink" title="什么是资源锁？"></a>什么是资源锁？</h4><p>一旦你在文章中插入资源或者作为封面图片，资源将会被锁定。你无法删除被锁定的资源直到你解锁它。</p>
+<h4 id="如何解锁资源？"><a href="#如何解锁资源？" class="headerlink" title="如何解锁资源？"></a>如何解锁资源？</h4><ol>
+<li>确信你已经在所有文章中移除了图片资源，并且没有任何地方引用。</li>
+<li>点击 <code>刷新锁</code> 将会在后端执行并且释放锁定资源。</li>
+<li>如果你的资源仍然被锁定，你需要再次确认在所有的文章或者 EPUB 属性中没有你的引用资源。</li>
+</ol>
+<p>注意：<code>插入资源</code> 仍然在测试中。当你插入媒体资源时，可能会发生一下问题。 ■</p>
+
+        
+          <h3 id="Create-Chapter">创建章节</h3>
+          <p><code>章节</code> -&gt; <code>增加章节</code> 和 <code>章节</code> -&gt; <code>插入章节</code> 是两种创建章节的方式。</p>
+<p><code>增加章节</code> 将会在章节列表底部添加一新章节。</p>
+<p>对于 <code>插入章节</code>，将会在选中的章节后创建一个新章节，并且将会保持选中章节的层级。</p>
+<p>范例，这里有一个章节列表：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- Level 2-2</span><br></pre></td></tr></table></figure>
+
+<p>如果选中 <code>Level 2-1</code> 并且 <code>增加章节</code>，新的章节列表将会变成：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- Level 2-2</span><br><span class="line">新章节</span><br></pre></td></tr></table></figure>
+
+<p>但如果你选择 <code>Level 2-1</code> 并 <code>插入章节</code>，新的章节列表将会变成：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- 新章节</span><br><span class="line">-- Level 2-2</span><br></pre></td></tr></table></figure>
+
+<p>■</p>
+
+        
+          <h3 id="Delete-Chapter">删除章节</h3>
+          <p><code>章节</code> -&gt; <code>删除章节</code> 可以删除你选中的章节。</p>
+<p><strong>注意：删除章节不会删除它的子章节。</strong></p>
+<p>范例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- Level 2-2</span><br></pre></td></tr></table></figure>
+
+<p>如果你删除 <code>Level 2-1</code>，章节列表将会变成：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 3-1</span><br><span class="line">-- Level 2-2</span><br></pre></td></tr></table></figure>
+
+<p>它的子章节将会升级。</p>
+<h4 id="如何选择多个章节？"><a href="#如何选择多个章节？" class="headerlink" title="如何选择多个章节？"></a>如何选择多个章节？</h4><p>你可以使用 <code>Ctl</code> 或  <code>Alt</code> 来帮助你多选。</p>
+<p>当你首先选中了第一个章节，并且 <code>Ctl</code> + 点击其他章节，两者都会被选中。如果你使用 <code>Alt</code> 进行相同操作，则会第一个选中章节和第二选中章节中的所有章节都会被选中。</p>
+<h4 id="使用-Del-来-删除章节"><a href="#使用-Del-来-删除章节" class="headerlink" title="使用 Del 来 删除章节"></a>使用 <code>Del</code> 来 <code>删除章节</code></h4><p>你可以使用键盘上的 <code>Del</code> 来 <code>删除章节</code>，他将会与 <code>Chapter</code> -&gt; <code>Delete Chapter</code> 执行相同的操作。■</p>
+
+        
+          <h3 id="Merge-Chapter">合并章节</h3>
+          <p><code>章节</code> -&gt; <code>合并章节</code> 将会合并所有被选中的章节到第一个被选中的章节。</p>
+<p>要注意的是，因为所有被选中的章节将会被删除，除了第一个被选中的章节。</p>
+<h4 id="如何选择多个选项？"><a href="#如何选择多个选项？" class="headerlink" title="如何选择多个选项？"></a>如何选择多个选项？</h4><p>请参见 <a href="#Delete-Chapter">删除章节</a>。■</p>
+
+        
+          <h3 id="Split-Chapter">拆分章节</h3>
+          <p><code>章节</code> -&gt; <code>拆分章节</code> 是一个很好用的功能，它能帮助你更快、更容易地拆分长文本。</p>
+<p>在 EPUBMaker 中，有两种方法来拆分章节：按模式拆分和按行数拆分。</p>
+<p>你可以在<a href="#Match-Patterns">模式匹配</a>中获得更多的信息。我们强烈推荐使用它。</p>
+<p>但如果你无法匹配模式，你也可以按行数来拆分。■</p>
+
+        
+          <h3 id="Sort-Chapter">排序章节</h3>
+          <p>你也许需要对你的章节进行排序以及建构你的章节。所以这个会帮到你。</p>
+<p>你可以右击来打开右击菜单，像这样：</p>
+<p><img src="/images/guide-sort-chapter-1.png" alt></p>
+<p>你可以找到与排序章节相关的四个操作：</p>
+<ul>
+<li>上移章节</li>
+<li>下移章节</li>
+<li>升级</li>
+<li>降级</li>
+</ul>
+<h4 id="上-下移章节"><a href="#上-下移章节" class="headerlink" title="上/下移章节"></a>上/下移章节</h4><p>前两个操作是用来排序你的章节列表的。</p>
+<p>如果你 <code>上移章节</code> ，被选中的章节将会移动到前一章节前，同时<strong>它的子章节也会一起移动</strong>。但是如果被选中章节在它的层级中是第一章节，操作将不生效。<code>下移章节</code> 相同。这里有一个范例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- Level 2-2</span><br><span class="line">---- Level 3-2</span><br><span class="line">-- Level 2-3</span><br></pre></td></tr></table></figure>
+
+<p>选择 <code>Level 2-2</code> 进行 <code>上移章节</code> ：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-2</span><br><span class="line">---- Level 3-2</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- Level 2-3</span><br></pre></td></tr></table></figure>
+
+<p>如果你选择 <code>Level 2-1</code> 进行 <code>上移章节</code>，操作将不会生效。因为 <code>Level 2-1</code> 是它所在层级的第一个章节。</p>
+<h4 id="升-降级"><a href="#升-降级" class="headerlink" title="升/降级"></a>升/降级</h4><p>剩下的两个操作是用来调整章节的级别。</p>
+<p>如果你 <code>升级</code>，被选中的章节会升一级，同时<strong>它的子章节将会一起升级</strong>。但是如果被选中的章节是第一级，将不会有任何操作。<code>降级</code> 相同。这里有一个范例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- Level 2-2</span><br><span class="line">---- Level 3-2</span><br><span class="line">-- Level 2-3</span><br></pre></td></tr></table></figure>
+
+<p>选择 <code>Level 2-2</code> 来 <code>升级</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line"> Level 2-2</span><br><span class="line">-- Level 3-2</span><br><span class="line">-- Level 2-3</span><br></pre></td></tr></table></figure>
+
+<p>如果你选择 <code>Level 1-1</code> 来 <code>升级</code> 的话，将不会有任何操作。因为 <code>Level 1-1</code> 是第一级。■</p>
+
+        
+          <h3 id="Rename-Chapter">重命名章节</h3>
+          <p>重命名章节十分简单。</p>
+<p>双击你想要重命名的章节。你可以看到一个输入框可以键入新的章节名。当你完成输入后，按下 <code>Enter</code> 或者点击任何其他地方即可。■</p>
+
+        
+          <h3 id="Do-Batch-Operation">批量操作</h3>
+          <p>EPUBMaker 有许多批量化的操作，有些是针对章节列表，有些针对文章编辑：</p>
+<h4 id="章节列表"><a href="#章节列表" class="headerlink" title="章节列表"></a>章节列表</h4><ul>
+<li><code>章节</code> -&gt; <code>将首行作为章节名</code></li>
+</ul>
+<p>它将获取每篇文章的首行文字并且将章节名重命名为首行文字。</p>
+<p> 如果首行为空，EPUBMaker 将会继续寻找下一行，知道获取到不为空的文字。</p>
+<p>如果 EPUBMaker  无法在文章中获取到任何文字，它将会保持章节原来的名字。</p>
+<ul>
+<li><code>章节</code> -&gt; <code>将章节名作为首行</code></li>
+</ul>
+<p>这个操作会将每个章节的章节名添加到它的文章第一行。</p>
+<ul>
+<li><code>工具</code> -&gt; <code>删除空白章节</code></li>
+</ul>
+<p>这个操作将会删除所有的空白章节。空格会被认为是空白。</p>
+<h4 id="Article-Editor"><a href="#Article-Editor" class="headerlink" title="Article Editor"></a>Article Editor</h4><ul>
+<li><code>工具</code> -&gt; <code>清除格式</code></li>
+</ul>
+<p>与 <code>编辑</code> -&gt; <code>移除格式</code> 相同。但你无需选中所有文章内容进行操作。它会直接移除所有文章中的格式。</p>
+<ul>
+<li><code>工具</code> -&gt; <code>移除空白行</code></li>
+</ul>
+<p>空白行将会马上被移除</p>
+<ul>
+<li><code>工具</code> -&gt; <code>移除重复行</code></li>
+</ul>
+<p>这个操作使用了 Levenshtein 距离算法来计算两个句子之间的相似度。</p>
+<p>详情请前往 <a href="#Levenshtein-Distance">Levenshtein 距离</a>。■</p>
+
+        
+          <h3 id="Find-Logs">寻找日志</h3>
+          <p>当你的 EPUBMaker 崩溃、无法响应、无法工作的时候，请告诉我们这些问题。在用文字描述问题之外，还可以用<strong>截屏</strong>或 <strong>EMDB 文件</strong>、 <strong>TXT 文件</strong>、<strong>EPUB 文件</strong>或其他的可以解释问题的相关文件。</p>
+<p>我们也非常希望能够获得<strong>日志</strong>文件。你可以在以下路径找到：</p>
+<p><code>C:\Users\${Users}\AppData\Roaming\epubmaker\log.log</code></p>
+<p>我们非常感谢你的每一个反馈和建议。</p>
+<p>非常感谢你的帮助！■</p>
+
+        
+        <h2 id="id-concepts">概念</h2>
+        
+          <h3 id="EMDB">EMDB</h3>
+          <p>EMDB 是 EPUBMaker 的数据结构文件，它可以被读取为 JSON 文件。</p>
+<p>EMDB 包含了书籍属性、章节和文章。资源将会以路径的方式被存储。如果你在不同的系统中打开 EMDB ，资源文件会无法找到。</p>
+<p>你可以通过 <code>文件</code> -&gt; <code>保存</code> 来创建新文件，并通过 <code>文件</code> -&gt; <code>打开</code> 来读取。</p>
+<p>不推荐自行修改文件。■</p>
+
+        
+          <h3 id="Match-Patterns">模式匹配</h3>
+          <p>在 EPUBMaker 中，有两种方式<a href="#Split-Chapter">拆分章节</a>。其中之一是按模式拆分。</p>
+<p>首先会创建一个正则表达式来匹配文章中的每一行。一旦正则表达式匹配成功，EPUBMaker 就会创建一个新章节并将匹配行之前的所有章节放到这个新章节中。接着 EPUBMaker 将会继续匹配下一行，直到文章结束。</p>
+<p>所以匹配的模式必须较为精准。</p>
+<p><img src="/images/concepts-match-pattern-1.png" alt></p>
+<p>你可以添加前缀、数字、后缀来组成正则表达式。这里有一个范例，如果前缀是 <strong>Chapter</strong> 和 <strong>Section</strong> 数字是罗马数字 <strong>I</strong>、 <strong>V</strong>、 <strong>X</strong>，后缀没有，并且一行内的字数少于<strong>50</strong>字。</p>
+<p>以下可以被匹配：</p>
+<ul>
+<li>Chapter I. one</li>
+<li>Chapter XII</li>
+<li>test Section X</li>
+</ul>
+<p>以下不能被匹配：</p>
+<ul>
+<li>Chapter One</li>
+<li>XI. example</li>
+<li>Chapter I. a long long long long …(over 50 words) words</li>
+</ul>
+<h4 id="如何添加或删除前缀、数字、后缀"><a href="#如何添加或删除前缀、数字、后缀" class="headerlink" title="如何添加或删除前缀、数字、后缀"></a>如何添加或删除前缀、数字、后缀</h4><p>想要添加的时候，你可以在输入框中键入，并且点击加号图标。</p>
+<p>想要删除的时候，你可以直接点击你想要删除的词语。</p>
+<h4 id="保存配置"><a href="#保存配置" class="headerlink" title="保存配置"></a>保存配置</h4><p>只要你保存了配置，你就可以在任何语言环境下使用。 ■</p>
+
+        
+          <h3 id="Levenshtein-Distance">Levenshtein 距离</h3>
+          <p><a href="https://en.wikipedia.org/wiki/Levenshtein_distance" target="_blank" rel="noopener">Levenshtein 距离</a> 是一种算法，目的在于计算出两个字符串的相似值。也被称作编辑距离。</p>
+<p>我们设置距离百分比为 <strong>0.95</strong>。</p>
+<p>距离百分比的公式为：1 - 距离 / 字符串长度. ■</p>
+
+        
+          <h3 id="Editable">可编辑</h3>
+          <p>你可以在编辑器的右下角找到状态。</p>
+<p><img src="/images/concepts-editable-1.png" alt></p>
+<p>编辑器有三种不同的状态：</p>
+<ul>
+<li>可编辑</li>
+<li>只读</li>
+<li>空</li>
+</ul>
+<p>如果你没有选择任何章节甚至没有在 EPUBMaker 中创建工作区，它将会显示 <code>空</code> 。在这个状态，你无法编辑。</p>
+<p><code>可编辑</code> 在 EPUBMaker 中是最常见的状态。在这个状态，你可以编辑文章。</p>
+<p><code>只读</code> 是针对文章行数超过 <strong>1000</strong>。因为实时编辑超过 1000 行的文章非常困难，你只能读取。如果你想要编辑，你可以先拆分文章。■</p>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+<footer id="about" class="about">
+  <div class="container container-about">
+    <div class="row flex flex-horizontal-center">
+      <div class="col-6 about-item">
+        <h3>鸣谢</h3>
+        <p>
+          <a href="https://icons8.com/" target="_blank">icon8</a>
+          <span>An awesome resources website</span>
+        </p>
+        <p>
+          <span>Powered by</span>
+          <a href="https://hexo.io" target="_blank">Hexo</a>
+        </p>
+      </div>
+      <div class="col-6 about-item">
+        <h3>联系我们</h3>
+        <p>
+          <span>Email</span> / <span>epubmaker2019@gmail.com</span>
+        </p>
+        <p>
+          <a href="https://twitter.com/EPUBMaker2019" target="_blank">Twitter</a>
+        </p>
+        <p>
+          <a href="https://github.com/EPUB-Maker/EPUBMaker-Releases/issues" target="_blank">讨论与问题</a>
+        </p>
+      </div>
+    </div>
+    <div class="text-center">
+      <p>Copyright © 2019 EPUBMaker. 版权所有。</p>
+    </div>
+  </div>
+</footer>
+<script>
+  var downloadLink = "https://github.com/EPUB-Maker/EPUBMaker-Releases/releases"
+</script>
+<script src="/js/index.js"></script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+.bg-color-main {
+  background-color: #4ebd97;
+}
+.eighty-height {
+  min-height: 80vh;
+}
+.full-height {
+  min-height: 100vh;
+}
+.flex {
+  display: flex;
+}
+.flex-vertical-center {
+  flex-direction: column;
+  justify-content: center;
+}
+.flex-horizontal-center {
+  align-items: center;
+}
+.out-container {
+  border-top: 1px;
+}
+.section {
+  min-height: 80vh;
+}
+.section .section-img-0 {
+  width: 100%;
+  max-width: 580px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+.section .section-img-1 {
+  width: 100px;
+}
+.section .section-img-gif {
+  width: 300px;
+}
+.section .section-p-1 {
+  max-width: 800px;
+}
+.section .figure-list {
+  margin: 80px 0 60px;
+}
+.section .figure-list p {
+  color: rgba(0,0,0,0.5);
+}
+.section h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #4ebd97;
+}
+.section h2 {
+  font-size: 2.5rem;
+  color: rgba(0,0,0,0.7);
+}
+.section p {
+  font-size: 1.25rem;
+  color: rgba(0,0,0,0.5);
+}
+#download {
+  height: 100vh;
+  margin-top: 80px;
+}
+#download .download-bg {
+  position: absolute;
+  background-color: #4ebd97;
+  transform: skew(0, -5deg);
+  width: 100%;
+  height: 110vh;
+  z-index: -1;
+}
+#download button {
+  margin-top: 30px;
+}
+#about {
+  background: #fff;
+}
+#about .container-about {
+  padding: 50px 150px;
+}
+#about .about-item {
+  height: 130px;
+}
+#about .about-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgba(0,0,0,0.7);
+  margin-bottom: 1rem;
+}
+#about p {
+  font-size: 0.9rem;
+  color: rgba(0,0,0,0.7);
+  line-height: 1rem;
+  margin-bottom: 0.2rem;
+}
+.container-documentation {
+  margin-top: 100px;
+}
+.container-documentation .navbar-brand {
+  width: 100%;
+}
+.doc-content {
+  height: 70vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  overflow-y: -moz-scrollbars-none;
+}
+.doc-content::-webkit-scrollbar {
+  width: 0;
+}
+.doc-content img {
+  max-width: 80%;
+  margin-left: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.doc-content code {
+  border-radius: 2.5px;
+  color: #fff;
+  padding: 2.5px;
+  background-color: rgba(0,0,0,0.5);
+}
+.doc-content h3 {
+  margin-top: 50px;
+  padding-top: 15px;
+  border-top: 1px dotted rgba(0,0,0,0.5);
+}
+.nav-link {
+  padding: 0.15rem 0.3rem;
+  font-size: 0.9rem;
+  color: #4ebd97;
+}
+.nav-link:hover {
+  color: rgba(78,189,151,0.6);
+}
+.nav .nav-link.active,
+.nav-pills .nav-link.active {
+  background-color: #4ebd97;
+}

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>EPUBMaker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <link rel="icon" href="/images/favicon.png">
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">EPUBMaker</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#download">Download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/documentation">Documentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/zh-CN/">中文版</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+---
+layout: layout
+---
+<div class="container container-documentation">
+  <div class="row">
+    <div class="col-3">
+      <nav id="navbar-documentation" class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Documentation</a>
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link" href="#id-guide">Guide</a>
+          <nav class="nav nav-pills flex-column">
+            
+              <a class="nav-link ml-3 my-1" href="#Start-a-new-Book">Start a new Book</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Import-TXT-or-EPUB">Import TXT or EPUB</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Edit-EPUB-Properties">Edit EPUB Properties</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Insert-Resources">Insert Resources</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Create-Chapter">Create Chapter</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Delete-Chapter">Delete Chapter</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Merge-Chapter">Merge Chapter</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Split-Chapter">Split Chapter</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Sort-Chapter">Sort Chapter</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Rename-Chapter">Rename Chapter</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Do-Batch-Operation">Do Batch Operation</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Find-Logs">Find Logs</a>
+            
+          </nav>
+          <a class="nav-link" href="#id-concepts">Concepts</a>
+          <nav class="nav nav-pills flex-column">
+            
+              <a class="nav-link ml-3 my-1" href="#EMDB">EMDB</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Match-Patterns">Match Patterns</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Levenshtein-Distance">Levenshtein Distance</a>
+            
+              <a class="nav-link ml-3 my-1" href="#Editable">Editable</a>
+            
+          </nav>
+        </nav>
+      </nav>
+    </div>
+    <div class="col-9">
+      <div class="doc-content" data-spy="scroll" data-target="#navbar-documentation" data-offset="0">
+        <h2 id="id-guide">Guide</h2>
+        
+          <h3 id="Start-a-new-Book">Start a new Book</h3>
+          <p>You have four ways to start a new book: </p>
+<ul>
+<li><code>File</code> -&gt; <code>New</code></li>
+<li><code>File</code> -&gt; <code>Open</code></li>
+<li><code>File</code> -&gt; <code>Import TXT</code></li>
+<li><code>File</code> -&gt; <code>Import EPUB</code></li>
+</ul>
+<p>When you <code>New</code> a book, it will create a new chapter and a new aritlce link to this chapter. The Chapter contains chapter name and the articles can be editable.</p>
+<p>All of them can establish a new workspace. For further more to know about the last two, you could go to <a href="#Import-TXT-or-EPUB">Import TXT or EPUB</a>.</p>
+<p>There is a litter different in EPUB properties settings, you could go to <a href="#Edit-EPUB-Properties">Edit EPUB Properties</a> to learn more about them. ■</p>
+
+        
+          <h3 id="Import-TXT-or-EPUB">Import TXT or EPUB</h3>
+          <p><code>Import TXT</code> will first create a chapter and import all the lines in this chapter. If the lines are over 1000, you’re unable to edit the chapter. (For Detail, please go to <a href="#Editable">Editable</a>)</p>
+<p><code>Import EPUB</code> will keep the EPUB’s chapter structure and convert the HTML pages into the EPUBMaker’s articles. It will also extract the resources(images, audios or videos) to the path:</p>
+<p><code>C:\Users\${Users}\AppData\Roaming\epubmaker\epubmaker-resource\${timestamp}</code></p>
+<p>EPUBMaker has a fast speed to process big data files. You can transfer your TXT over 2MB or EPUB over 20MB(It may take a little more time to convert). ■</p>
+
+        
+          <h3 id="Edit-EPUB-Properties">Edit EPUB Properties</h3>
+          <p>When you <code>New</code> a new book or <code>Import TXT</code>, it will create a new chapter named “New Chapter” and a new article with nothing. The book properties will also be set a default value:</p>
+<ul>
+<li>Book Name: Book</li>
+<li>Author: Author</li>
+<li>Description: Description</li>
+<li>Languages: English</li>
+<li>EPUB version: 3.0</li>
+<li>Unique Identifier Key: uid</li>
+<li>Unique Identifier Value: (generated by random, not recommended to modify it)</li>
+</ul>
+<p>If you <code>Import EPUB</code> , EPUBMaker will set the EPUB properties to the EPUB’s you provided(if exist). What should be noticed is that EPUBMaker will only set the EPUB properties in the first <code>Import EPUB</code> . If you already have a workspace, it will never overwrite the EPUB properties. ■</p>
+
+        
+          <h3 id="Insert-Resources">Insert Resources</h3>
+          <p>If you want to insert a media resource into an article, you should import this resource into the library first. Click the <code>Edit</code> -&gt;  <code>Resources Library</code>  or <code>Edit</code> -&gt; <code>Insert Image</code> , <code>Edit</code> -&gt; <code>Insert Audio</code>, <code>Edit</code> -&gt; <code>Insert Video</code> to open the resource library.</p>
+<p><img src="/images/guide-insert-resources-1.png" alt></p>
+<h4 id="How-to-Import-Resources"><a href="#How-to-Import-Resources" class="headerlink" title="How to Import Resources"></a>How to Import Resources</h4><p>There are two ways to import resources, the first one is to click <code>Import</code> , and select the resources you want.</p>
+<p>The second one is to drag your resources directly into the media library like below:</p>
+<p><img src="/images/guide-insert-resources-2.gif" alt></p>
+<h4 id="How-to-Insert-delete-Resources-into-article"><a href="#How-to-Insert-delete-Resources-into-article" class="headerlink" title="How to Insert/delete Resources into article"></a>How to Insert/delete Resources into article</h4><p>You should first select one of the resources, and then you could select other resources to insert or delete at all.</p>
+<p><img src="/images/guide-insert-resources-3.png" alt></p>
+<p><img src="/images/guide-insert-resources-4.png" alt></p>
+<h4 id="What-is-Resource-Lock"><a href="#What-is-Resource-Lock" class="headerlink" title="What is Resource Lock?"></a>What is Resource Lock?</h4><p>Once you insert your resource into article or as the cover images, it will be locked. You can not delete the locked resources until you unlock it.</p>
+<h4 id="How-to-unlock-the-Resource"><a href="#How-to-unlock-the-Resource" class="headerlink" title="How to unlock the Resource?"></a>How to unlock the Resource?</h4><ol>
+<li>Make sure to remove the resource from all the articles and no reference on it.</li>
+<li>Click <code>Refresh Lock</code> it will be done in backend and release the lock resource.</li>
+<li>If your resource is still locked, you have to double-check in all the articles and EPUB Properties’ cover image.</li>
+</ol>
+<p>Note: <code>Insert Resources</code> is still under testing. When you insert media resources into articles, some issues may occur. ■</p>
+
+        
+          <h3 id="Create-Chapter">Create Chapter</h3>
+          <p><code>Chapter</code> -&gt; <code>Add Chapter</code> and <code>Chapter</code> -&gt; <code>Insert Chapter</code> are both the ways to create a chapter. </p>
+<p><code>Add Chapter</code> will add a new chapter to the bottom of the chapter list.</p>
+<p>For <code>Insert Chapter</code>, it will add a new chapter behind the selected chapter and keep the level of the selected chapter.</p>
+<p>For example, There has a Chapter list:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- Level 2-2</span><br></pre></td></tr></table></figure>
+
+<p>If I select the <code>Level 2-1</code> and <code>Add Chapter</code>, the new Chapter List will be</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- Level 2-2</span><br><span class="line">New Chapter</span><br></pre></td></tr></table></figure>
+
+<p>But if you select the <code>Level 2-1</code> and <code>Insert Chapter</code>, the new Chapter List will be</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- New Chapter</span><br><span class="line">-- Level 2-2</span><br></pre></td></tr></table></figure>
+
+<p>■</p>
+
+        
+          <h3 id="Delete-Chapter">Delete Chapter</h3>
+          <p><code>Chapter</code> -&gt; <code>Delete Chapter</code> can delete the chapter you selected.</p>
+<p><strong>Note: Delete a chapter will not delete its children chapters</strong></p>
+<p>For example: </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- Level 2-2</span><br></pre></td></tr></table></figure>
+
+<p>If you delete <code>Level 2-1</code>, the chapter list will be:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 3-1</span><br><span class="line">-- Level 2-2</span><br></pre></td></tr></table></figure>
+
+<p>Its children will up their chapter level.</p>
+<h4 id="How-to-choose-multiple-selections"><a href="#How-to-choose-multiple-selections" class="headerlink" title="How to choose multiple selections?"></a>How to choose multiple selections?</h4><p>You could use <code>Ctl</code> or  <code>Alt</code> to help your selection. </p>
+<p>When you first choose one chapter, and  <code>Ctl</code> + Click another Chapter, both of them will be chosen. If you do the same operation with <code>Alt</code>, it will choose all the chapters between the first chosen chapter and the second chosen chapter.</p>
+<h4 id="Use-Del-to-Delete-Chapter"><a href="#Use-Del-to-Delete-Chapter" class="headerlink" title="Use Del to Delete Chapter"></a>Use <code>Del</code> to <code>Delete Chapter</code></h4><p>You could use <code>Del</code> in your keyboard to <code>Delete Chapter</code>, it will be the same operation as you click <code>Chapter</code> -&gt; <code>Delete Chapter</code>. ■</p>
+
+        
+          <h3 id="Merge-Chapter">Merge Chapter</h3>
+          <p><code>Chapter</code> -&gt; <code>Merge Chapter</code> will merge all the selected chapters into the first selected chapter.</p>
+<p>You should pay attention to it because all the selected chapters will be deleted except the first selected chapter.</p>
+<h4 id="How-to-choose-multiple-selections"><a href="#How-to-choose-multiple-selections" class="headerlink" title="How to choose multiple selections?"></a>How to choose multiple selections?</h4><p>Please see <a href="#Delete-Chapter">Delete Chapter</a>. ■</p>
+
+        
+          <h3 id="Split-Chapter">Split Chapter</h3>
+          <p><code>Chapter</code> -&gt; <code>Split Chapter</code> is a useful function that helps you split the long text faster and easier.</p>
+<p>There are two ways to split chapter in EPUBMaker, split by patterns and split by lines.</p>
+<p>You could get more information about <a href="#Match-Patterns">Match Patterns</a>. And we are strongly recommendation to use it.</p>
+<p>But if you are unable to match the patterns, you can also split by lines. ■</p>
+
+        
+          <h3 id="Sort-Chapter">Sort Chapter</h3>
+          <p>You may have the need to sort and structure your chapter list, So this one could help you.</p>
+<p>You can use the Right-Click to open the Right context menu like this:</p>
+<p><img src="/images/guide-sort-chapter-1.png" alt></p>
+<p>You could find four operations are related to sort chapter:</p>
+<ul>
+<li>Up Chapter</li>
+<li>Down Chapter</li>
+<li>Up Level</li>
+<li>Down Level</li>
+</ul>
+<h4 id="Up-Down-Chapter"><a href="#Up-Down-Chapter" class="headerlink" title="Up/Down Chapter"></a>Up/Down Chapter</h4><p>The first two operations are used to sort your chapter list.</p>
+<p>If you <code>Up Chapter</code> , the selected chapter will move forward to the chapter ahead of it and <strong>its children chapters will move together</strong>. But If the selected chapter is the first chapter in its level, it will do nothing. The same as <code>Down Chapter</code>. Here we will show you some examples:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- Level 2-2</span><br><span class="line">---- Level 3-2</span><br><span class="line">-- Level 2-3</span><br></pre></td></tr></table></figure>
+
+<p>Select the <code>Level 2-2</code> to <code>Up Chapter</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-2</span><br><span class="line">---- Level 3-2</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- Level 2-3</span><br></pre></td></tr></table></figure>
+
+<p>If you select the <code>Level 2-1</code> to <code>Up Chapter</code>, it will do nothing. Because <code>Level 2-1</code> is the first chapter in its level.</p>
+<h4 id="Up-Down-Level"><a href="#Up-Down-Level" class="headerlink" title="Up/Down Level"></a>Up/Down Level</h4><p>The rest two of the operations are used to adjust the level of chapter.</p>
+<p>If you <code>Up Level</code> , the selected chapter will up its level and <strong>its children chapters will up together</strong>. But If the selected chapter is the top level, it will do nothing. The same as <code>Down Level</code>. Here we will show you some examples:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line">-- Level 2-2</span><br><span class="line">---- Level 3-2</span><br><span class="line">-- Level 2-3</span><br></pre></td></tr></table></figure>
+
+<p>Select the <code>Level 2-2</code> to <code>Up Chapter</code>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Level 1-1</span><br><span class="line">-- Level 2-1</span><br><span class="line">---- Level 3-1</span><br><span class="line"> Level 2-2</span><br><span class="line">-- Level 3-2</span><br><span class="line">-- Level 2-3</span><br></pre></td></tr></table></figure>
+
+<p>If you select the <code>Level 1-1</code> to <code>Up Level</code>, it will do nothing. Because the <code>Level 1-1</code> is the top level. ■</p>
+
+        
+          <h3 id="Rename-Chapter">Rename Chapter</h3>
+          <p>It is easy for you to rename your chapter.</p>
+<p>Double Click the chapter you want to rename. You can see the input form for you to type the new chapter name. When you finish your typing, press <code>Enter</code> or click everywhere else. ■</p>
+
+        
+          <h3 id="Do-Batch-Operation">Do Batch Operation</h3>
+          <p>EPUBMaker has some batch operations, some are for chapter list, some are for article editor:</p>
+<h4 id="Chapter-List"><a href="#Chapter-List" class="headerlink" title="Chapter List"></a>Chapter List</h4><h5 id="Chapter-gt-Take-First-Line-as-Chapter-Name"><a href="#Chapter-gt-Take-First-Line-as-Chapter-Name" class="headerlink" title="Chapter -&gt; Take First Line as Chapter Name"></a><code>Chapter</code> -&gt; <code>Take First Line as Chapter Name</code></h5><p>It will get the first line of each article and rename the chapter name as the first line text.</p>
+<p>If the first line is empty, EPUBMaker will continue to find the next line until it gets the non-empty text.</p>
+<p>If EPUBMaker is unable to find any text in an article, it will keep the original name of the chapter.</p>
+<ul>
+<li><code>Chapter</code> -&gt; <code>Take Chapter Name as First Line</code> </li>
+</ul>
+<p>It will add each chapter’s name to the head of its article.</p>
+<ul>
+<li><code>Tool</code> -&gt; <code>Delete Blank Chapter</code></li>
+</ul>
+<p>It will delete all the blank chapter. Space is recognized as the blank.</p>
+<h4 id="Article-Editor"><a href="#Article-Editor" class="headerlink" title="Article Editor"></a>Article Editor</h4><ul>
+<li><code>Tool</code> -&gt; <code>Reformat</code></li>
+</ul>
+<p>It’s the same as the <code>Edit</code> -&gt;  <code>remove format</code>. But you needn’t select all the content of the article. It will directly remove all the formats in the article.</p>
+<ul>
+<li><code>Tool</code> -&gt; <code>Remove Blank Line</code></li>
+</ul>
+<p>Blank lines will be removed at once.</p>
+<ul>
+<li><code>Tool</code> -&gt; <code>Remove Duplicate Line</code></li>
+</ul>
+<p>It uses the algorithm of Levenshtein-Distance to calculate the similarity between two sentences. To get more information. Please go to <a href="#Levenshtein-Distance">Levenshtein Distance</a>.■</p>
+
+        
+          <h3 id="Find-Logs">Find Logs</h3>
+          <p>When your EPUBMaker is going crash, not responding or not working. Please tell us about these issues. It’s better for you not only describe the issues in the text but also in <strong>screenshots</strong> or <strong>EMDB files</strong> / <strong>TXT files</strong> / <strong>EPUB files</strong> or any other files related to explain these issues.</p>
+<p>We would also welcome the <strong>logs</strong> from EPUBMaker. You can find it in:</p>
+<p><code>C:\Users\${Users}\AppData\Roaming\epubmaker\log.log</code></p>
+<p>We would appreciate each of your feedbacks and suggestions.</p>
+<p>Thank you very much for your help! ■</p>
+
+        
+        <h2 id="id-concepts">Concepts</h2>
+        
+          <h3 id="EMDB">EMDB</h3>
+          <p>EMDB is a data structure of EPUBMaker. It can be read as a JSON file.</p>
+<p>EMDB contains only book properties, chapters, and articles. Resources will be stored on its path. If you open your EMDB in different systems, resources will be unable to be found.</p>
+<p>You can create it by <code>File</code> -&gt; <code>Save</code> a new file and read it through <code>File</code> -&gt;<code>Open</code>. </p>
+<p>It’s not recommended to modify it. ■</p>
+
+        
+          <h3 id="Match-Patterns">Match Patterns</h3>
+          <p>There are two ways to <a href="#Split-Chapter">Split Chapter</a> in EPUBMaker. One of them is to split by patterns.</p>
+<p>The Regex expression will be set up to match every line of the article. Once the regex expression matched, EPUBMaker will create a new Chapter and put all the lines which are ahead of the matched line in it. Then EPUBMaker keeps matching the next lines until the end of this article.</p>
+<p>So the match pattern should be accurate.</p>
+<p><img src="/images/concepts-match-pattern-1.png" alt></p>
+<p>You could add prefix, number or suffix to compose the regex. For example, if the prefix is <strong>Chapter</strong> and <strong>Section</strong>, the number is the roman number <strong>I</strong>, <strong>V</strong>, <strong>X</strong>, the suffix is none and less than <strong>50</strong> words in one line.</p>
+<p>Can be matched:</p>
+<ul>
+<li>Chapter I. one</li>
+<li>Chapter XII</li>
+<li>test Section X</li>
+</ul>
+<p>Can NOT be matched:</p>
+<ul>
+<li>Chapter One</li>
+<li>XI. example</li>
+<li>Chapter I. a long long long long …(over 50 words) words</li>
+</ul>
+<h4 id="How-to-add-or-delete-prefix-number-suffix"><a href="#How-to-add-or-delete-prefix-number-suffix" class="headerlink" title="How to add or delete prefix/number/suffix"></a>How to add or delete prefix/number/suffix</h4><p>To add words, you could type the word in input and click add icon.</p>
+<p>To delete words, you could click the word you want to delete.</p>
+<h4 id="Save-your-configuration"><a href="#Save-your-configuration" class="headerlink" title="Save your configuration"></a>Save your configuration</h4><p>Once save your configuration, you can use it in every language. ■</p>
+
+        
+          <h3 id="Levenshtein-Distance">Levenshtein Distance</h3>
+          <p><a href="https://en.wikipedia.org/wiki/Levenshtein_distance" target="_blank" rel="noopener">Levenshtein Distance</a> is a method aiming at calculate the similarity of two string. It was also referred as Edit distance.  </p>
+<p>We set the distance percent for <strong>0.95</strong>.</p>
+<p>The distance percent = 1 - distance / string.length. ■</p>
+
+        
+          <h3 id="Editable">Editable</h3>
+          <p>You could find status in the bottom right corner of the editor.</p>
+<p><img src="/images/concepts-editable-1.png" alt></p>
+<p>The editor has 3 different status:</p>
+<ul>
+<li>Editable</li>
+<li>Readable</li>
+<li>Empty</li>
+</ul>
+<p>If you choose none of the chapters or even not create a workspace in EPUBMaker, it will show <code>Empty</code>. In this status, you are unable to edit anything.</p>
+<p><code>Editable</code> is the most common status in EPUBMaker. In this status, you could edit the article.</p>
+<p><code>Readable</code> is a for the articles which lines are over <strong>1000</strong>. Because it’s hard to edit the articles over 1000 lines. In this status, you could only read the article. If you want to edit it, you could split the chapter first. ■</p>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+<footer id="about" class="about">
+  <div class="container container-about">
+    <div class="row flex flex-horizontal-center">
+      <div class="col-6 about-item">
+        <h3>Thanks</h3>
+        <p>
+          <a href="https://icons8.com/" target="_blank">icon8</a>
+          <span>An awesome resources website</span>
+        </p>
+        <p>
+          <span>Powered by</span>
+          <a href="https://hexo.io" target="_blank">Hexo</a>
+        </p>
+      </div>
+      <div class="col-6 about-item">
+        <h3>Contact Us</h3>
+        <p>
+          <span>Email</span> / <span>epubmaker2019@gmail.com</span>
+        </p>
+        <p>
+          <a href="https://twitter.com/EPUBMaker2019" target="_blank">Twitter</a>
+        </p>
+        <p>
+          <a href="https://github.com/EPUB-Maker/EPUBMaker-Releases/issues" target="_blank">Issues &amp; Bugs</a>
+        </p>
+      </div>
+    </div>
+    <div class="text-center">
+      <p>Copyright © 2019 EPUBMaker. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+  var downloadLink = "https://github.com/EPUB-Maker/EPUBMaker-Releases/releases"
+</script>
+<script src="/js/index.js"></script>
+  </div>
+</body>
+</html>
