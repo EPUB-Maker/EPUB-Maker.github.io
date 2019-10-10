@@ -75,7 +75,7 @@
   background: #fff;
 }
 #about .container-about {
-  padding: 50px 150px;
+  padding: 50px 10%;
 }
 #about .about-item {
   height: 130px;
@@ -134,4 +134,39 @@
 .nav .nav-link.active,
 .nav-pills .nav-link.active {
   background-color: #4ebd97;
+}
+@media (max-width: 400px) and (orientation: portrait) {
+  .mobile-one-line {
+    flex-direction: column;
+  }
+  .mobile-hide {
+    display: none;
+  }
+  .col-3,
+  .col-4,
+  .col-6,
+  .col-8,
+  .col-9 {
+    flex: 1;
+    max-width: 100%;
+  }
+  .section-img-1 {
+    width: 100% !important;
+  }
+  .mobile-hight-0 {
+    min-height: auto;
+    height: auto;
+  }
+  .mobile-top-20 {
+    margin-top: 30%;
+  }
+  .mobile-center {
+    text-align: center;
+  }
+  .container-about {
+    padding: 20px !important;
+  }
+  .doc-content {
+    overflow: auto;
+  }
 }
