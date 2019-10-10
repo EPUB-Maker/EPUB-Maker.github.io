@@ -3,7 +3,7 @@ layout: layout
 ---
 <div class="container container-documentation">
   <div class="row">
-    <div class="col-3">
+    <div class="col-3 mobile-hide">
       <nav id="navbar-documentation" class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#"><%= __('navigator.documentation') %></a>
         <nav class="nav nav-pills flex-column">
@@ -23,7 +23,7 @@ layout: layout
       </nav>
     </div>
     <div class="col-9">
-      <div class="doc-content" data-spy="scroll" data-target="#navbar-documentation" data-offset="0">
+      <div class="doc-content mobile-hight-0" data-spy="scroll" data-target="#navbar-documentation" data-offset="0">
         <h2 id="id-guide"><%= __('documentation.guide') %></h2>
         <% guide.forEach((post, index) => { %>
           <h3 id="<%= post.linkId %>"><%= post.title %></h3>
